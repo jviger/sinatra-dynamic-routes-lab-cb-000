@@ -8,8 +8,9 @@ class App < Sinatra::Base
   end
   
   get "/say/:number/:phrase" do
-    @reversed_name = params[:name].reverse
-    "Hello #{@reversed_name}!"
+    @phrase = params[:phrase]
+    @times = params[:number]
+    @times.times { "#{phrase}"}
   end
   
   get "/square/:number" do
