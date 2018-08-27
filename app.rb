@@ -12,4 +12,9 @@ class App < Sinatra::Base
     "Hello #{@reversed_name}!"
   end
   
+  get "/say/:number/:phrase" do
+    @reversed_name = params[:name].reverse
+    "Hello #{@reversed_name}!"
+  end
+  
 end
