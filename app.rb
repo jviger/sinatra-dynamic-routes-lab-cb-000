@@ -31,8 +31,8 @@ class App < Sinatra::Base
   end
   
   get "/:operation/:number1/:number2" do
-    @square = params[:number].to_i * params[:number].to_i
-    "#{@square.to_s}!"
+    @operation = params[:operation]
+    @number1 = params[:number1]
   end
   
 end
